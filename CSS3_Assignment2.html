@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Learning CSS3: Assignment 2
+    </title>
+    <style type="text/css">
+        div
+        {
+            height:300px;
+            width:300px;
+            margin: 25px;
+            padding: 3px;
+            border:2px dashed blue;
+            text-align: center;
+            color:white;
+        }
+        #myDiv
+        {
+            background: blue; 
+            background: linear-gradient(violet,indigo,blue,green,yellow,orange,red);
+            -webkit-transition-property: height,width;
+            -webkit-transition-duration: 2s;
+            -webkit-transition-timing-function: ease-in-out;
+            
+            position:absolute;
+            top:0px;
+            left:0px;
+        }
+        #myDiv2
+        {
+            background: blue; 
+           
+            background: radial-gradient(violet,indigo,blue,green,yellow,orange,red);
+            -webkit-transition-property: height,width;
+            -webkit-transition-duration: 2s;
+            -webkit-transition-timing-function: ease-in-out;
+      
+            position:absolute;
+            bottom:0px;
+            right:0px;
+        }
+        #myDiv:hover
+        {
+            height:500px;
+            width: 500px;
+          
+            animation-name:box1;
+           
+            animation-duration:2s;
+        }
+        #myDiv2:hover
+        {
+            height:500px;
+            width: 500px;
+          
+            animation-name:box2;
+          
+            animation-duration:2s;
+        }
+        
+
+        @keyframes box1
+        {
+            0%   {
+                
+                    background: linear-gradient(violet,indigo,blue,green,yellow,orange,red);
+                }
+            25% {
+                   
+                    background: linear-gradient(indigo,blue,green,yellow,orange,red,violet);
+                }
+            50% {
+                   
+                    background: linear-gradient(blue,green,yellow,orange,red,violet,indigo);
+                }
+            75% {
+                 
+                    background: linear-gradient(green,yellow,orange,red,violet,indigo,blue);
+                }
+            100%{
+                   
+                    background: linear-gradient(yellow,orange,red,violet,indigo,blue,green);
+                }
+        }
+     
+     
+        @keyframes box2;
+        {
+            0%   {
+                    
+                    background: radial-gradient(violet,indigo,blue,green,yellow,orange,red);
+                }
+            25% {
+                    
+                    background: radial-gradient(indigo,blue,green,yellow,orange,red,violet);
+                }
+            50% {
+                    
+                    background: radial-gradient(blue,green,yellow,orange,red,violet,indigo);
+                }
+            75% {
+                    
+                    background: radial-gradient(green,yellow,orange,red,violet,indigo,blue);
+                }
+            100%{
+                    
+                    background: radial-gradient(yellow,orange,red,violet,indigo,blue,green);
+                }
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        <h3>Dvision 1</h3>
+    </div>
+    <div id="myDiv2">
+        <h3>Dvision 2</h3>
+    </div>
+</body>
+</html>
